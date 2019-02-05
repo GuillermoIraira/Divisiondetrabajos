@@ -19,7 +19,7 @@ public class ProveedorServiceImpl implements IProveedorService{
 	@Override
 	@Transactional(readOnly = true)
 	public List<Proveedor> findAll() {
-		// TODO Auto-generated method stub
+		
 		return (List<Proveedor>) proveedorDao.findAll();
 	}
 
@@ -40,6 +40,7 @@ public class ProveedorServiceImpl implements IProveedorService{
 	@Override
 	@Transactional
 	public void delete(Long id) {
+		
 		proveedorDao.delete(id);
 		
 	}
