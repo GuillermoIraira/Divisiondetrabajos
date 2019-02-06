@@ -52,9 +52,22 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+	<scope>test</scope>
 		</dependency>
+		
+		<!-- VALIDACION: usando anotaciones -->  
+		<dependency>
+   <groupId>javax.validation</groupId>
+   <artifactId>validation-api</artifactId>
+   <version>1.1.0.Final</version>
+</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>5.3.5.Final</version>
+			</dependency> 
 	</dependencies>
+	
 
 	<build>
 		<plugins>
