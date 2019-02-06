@@ -33,9 +33,11 @@ public class Cliente implements Serializable {
 	private Long id;
 
 	@NotEmpty
+	@Size (min=4, max=15)
 	private String nombre;
 	
 	@NotEmpty
+	@Size (min=4, max=20)
 	private String apellido;
 	
 	@NotEmpty
