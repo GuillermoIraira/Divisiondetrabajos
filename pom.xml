@@ -55,17 +55,7 @@
 	<scope>test</scope>
 		</dependency>
 		
-		<!-- VALIDACION: usando anotaciones -->  
-		<dependency>
-   <groupId>javax.validation</groupId>
-   <artifactId>validation-api</artifactId>
-   <version>1.1.0.Final</version><!--$NO-MVN-MAN-VER$-->
-</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>5.3.5.Final</version><!--$NO-MVN-MAN-VER$-->
-			</dependency> 
+		
 	</dependencies>
 	
 
