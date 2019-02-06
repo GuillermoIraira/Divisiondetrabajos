@@ -105,7 +105,7 @@ public class ProveedorController {
 		proveedorService.save(proveedor);
 		status.setComplete();
 		flash.addFlashAttribute("success", mensajeFlash);
-		return "redirect:proveedores/Listar";
+		return "redirect:/proveedores/Listar";
 	}
 		
 		@RequestMapping(value="/proveedores/eliminar/{id}")
