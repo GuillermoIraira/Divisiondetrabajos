@@ -27,6 +27,7 @@
 								th:errorclass="'form-control alert-danger'" /> <small
 								class="form-text text-danger"
 								th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></small>
+						<p>Ej: John</p>
 						</div>
 					</div>
 					<div class="form-group row">
@@ -34,8 +35,10 @@
 						<div class="col-sm-6">
 							<input type="text" th:field="*{apellido}" class="form-control"
 								th:errorclass="'form-control alert-danger'" /> <small
+								
 								class="form-text text-danger"
 								th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}"></small>
+								<p>Ej: Rockefeller</p>
 						</div>
 					</div>
 					<div class="form-group row">
@@ -45,6 +48,7 @@
 								th:errorclass="'form-control alert-danger'" /> <small
 								class="form-text text-danger"
 								th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></small>
+								<p>Ej: JRockefeller@gmail.com</p>
 						</div>
 					</div>
 					<div class="form-group row">
@@ -54,6 +58,8 @@
 								th:errorclass="'form-control alert-danger'" /> <small
 								class="form-text text-danger"
 								th:if="${#fields.hasErrors('createAt')}" th:errors="*{createAt}"></small>
+								<p>Ej: yyyy-mm-dd</p>
+								
 						</div>
 					</div>
 
