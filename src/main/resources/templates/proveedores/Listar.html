@@ -1,10 +1,64 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout :: head"></head>
+
 <body>
 
+	<header th:replace="layout/layout :: header"></header>
+
+	<div class="container py-4">
+
+		<div class="card bg-light">
+			<div class="card-header" th:text="${titulo}"></div>
+			<div class="card-body">
+
+				<h4 class="card-title">
+					<a th:href="@{/proveedores/form/}" class="btn btn-primary btn-xs">Agregar
+						Proveedor</a>
+				</h4>
+				
+				
+				<table class="table table-striped table-bordered">
+					<thead class="thead-inverse">
+						<tr>
+							<th>Id</th>
+							<th>Nombre</th>
+							<th>Apellido</th>
+							<th>Correo</th>
+							<th>Teléfono</th>
+							<th>Empresa</th>
+							<th>Ciudad</th>
+							<th>Foto</th>
+							
+						</tr>
+					</thead>
+					<tbody>
+						<!-- ESTE PROVEEDOR ENTRE LLAVES PROVIENE DEL CONTROLLER EN model.addAttribute("proveedor", proveedor); EL QUE EST� ENTRE COMILLAS-->
+						<tr th:each="proveedor: ${proveedores}">
+
+							<!-- TODOS ESTOS "proveedor" PROVIENEN DE "proveedor" DE ARRIBA SIN LAS LLAVES -->
+							<td><a class="btn btn-primary btn-xs" th:href="@{/proveedores/ver/} +${proveedor.id}" th:text="${proveedor.id}"></a></td>
+							<td th:text="${proveedor.nombre}"></td>
+							<td th:text="${proveedor.apellido}"></td>
+							<td th:text="${proveedor.email}"></td>
+							<td th:text="${proveedor.telefono}"></td>
+							<!-- CONSIDERAR QUE DEBE POSEER EL NOMBRE DE LA VARIABLE ORIGINAL NO LA MODIFICADA POR "@Column" -->
+							<td th:text="${proveedor.empresa}"></td>
+							<td th:text="${proveedor.ciudad}"></td>
+							<td th:text="${proveedor.foto}"></td>
+							
+
+						</tr>
+					</tbody>
+
+				</table>
+
+				<nav th:replace="paginator-nav :: paginator"></nav>
+
+			</div>
+		</div>
+	</div>
+
+	<footer th:replace="layout/layout :: footer"></footer>
 </body>
 </html>

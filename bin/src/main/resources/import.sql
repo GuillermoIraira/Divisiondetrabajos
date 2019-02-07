@@ -42,3 +42,6 @@ INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(1, 1, 7);
 
 INSERT INTO facturas (descripcion, observacion, cliente_id, create_at) VALUES('Factura Bicicleta', 'Alguna nota importante!', 1, NOW());
 INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(3, 2, 6);
+                                                                              
+INSERT INTO proveedores (nombre, apellido, correo, telefono, ciudad, empresa, foto) VALUES('Cesar', 'Alquinta', 'calquinta@gmail.com', 7986525, 'La Serena', 'Tecnolong', '');
+INSERT INTO proveedores (nombre, apellido, correo, telefono, ciudad, empresa, foto) VALUES('Karla', 'Galleguillos', 'kgalleguillos@live.cl', 98465375, 'La Serena', 'NicoleStore', '');

@@ -31,9 +31,9 @@
 				<div th:if="${#lists.isEmpty(cliente.facturas)}"
 					class="alert alert-info my-4"
 					th:text="'No hay facturas asignadas para el cliente ' + ${cliente.nombre} + ' ' + ${cliente.apellido}"></div>
-
+<div class="table-responsive">
 				<table th:if="${not #lists.isEmpty(cliente.facturas)}"
-					class="table table-bordered table-striped my-4">
+					class="table table-sm table-striped table-hover">
 					<thead class="thead-inverse">
 						<tr>
 							<th>folio</th>
@@ -63,7 +63,7 @@
 
 			</div>
 		</div>
-
+</div>
 	</div>
 
 	<footer th:replace="layout/layout :: footer"></footer>
