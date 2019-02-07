@@ -20,6 +20,7 @@
 									value : item.id,
 									label : item.nombre,
 									precio : item.precio,
+									foto : item.foto,
 								};
 							}));
 						},
@@ -38,6 +39,7 @@
 					linea = linea.replace(/{ID}/g, ui.item.value);
 					linea = linea.replace(/{NOMBRE}/g, ui.item.label);
 					linea = linea.replace(/{PRECIO}/g, ui.item.precio);
+					linea = linea.replace(/{FOTO}/g, ui.item.foto);
 					
 					$("#cargarItemProductos tbody").append(linea);
 					itemsHelper.calcularImporte(ui.item.value, ui.item.precio, 1);
