@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" 	th:href="@{/css/bootstrap.min.css}" />
+<link rel="stylesheet"	th:href="@{/css/jquery-ui.min.css}" /></head>
 <body>
 
 <nav th:fragment="paginator">
 
-<ul class="pagination">
+<ul class="pagination pagination-responsive ">
 <li class="page-item" th:class="${page.first? 'page-item disabled': 'page-item'}">
 <span class="page-link" th:if="${page.first}">Primera</span>
 <a class="page-link" th:if="${not page.first}" th:href="@{${page.url}(page=0)}">Primera</a>
