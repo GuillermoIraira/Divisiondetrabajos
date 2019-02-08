@@ -5,9 +5,9 @@
 <link rel="stylesheet"	th:href="@{/css/jquery-ui.min.css}" /></head>
 <body>
 
-<nav th:fragment="paginator">
+<nav th:fragment="paginator" aria-label="Page navigation example" class="table-responsive mb-2">
 
-<ul class="pagination pagination-responsive ">
+<ul class="pagination mb-0">
 <li class="page-item" th:class="${page.first? 'page-item disabled': 'page-item'}">
 <span class="page-link" th:if="${page.first}">Primera</span>
 <a class="page-link" th:if="${not page.first}" th:href="@{${page.url}(page=0)}">Primera</a>
@@ -36,6 +36,5 @@
 </ul>
 
 </nav>
-
 </body>
 </html>
